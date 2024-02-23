@@ -1,0 +1,30 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="home">
+    <div class="container">
+        <h1 class="home-title">Новости о попугах</h1>
+        <p class="home-description">Здесь ты найдешь крутые (круче тебя точно) новости о попугах, про попугов и для попугов (для тебя сделаю исключение, мешок с костями)</p>
+        <a href="#Last-news" class="button-outline-light">Последние новости</a>
+    </div>
+</section>
+<section class="last-news">
+    <div class="container">
+        <h2 class="primary-title" id="Last-news">Последние новости</h2>
+        <div class="news-row">
+            {% for post in posts %}
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                </div>
+                <h3 class="news-title">{{ post.title }}</h3>
+                <h3 class="news-date">{{ post.post_date|date:"d.m.Y" }}</h3>
+                <a href="{% url 'news_detail_page' pk=post.pk %}" class="button-primary">Прочитать</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

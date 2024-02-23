@@ -1,0 +1,45 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="news">
+    <div class="container">
+        <h1 class="primary-title">Новости</h1>
+        <div class="news-row">
+            <div class="news-card"> 
+                <div class="news-img">
+                    <img src="../../static/images/Johnny.jpg" alt="test">
+                </div>
+                <h3 class="news-title">Джонни на море (а ты нет)</h3>
+                <h3 class="news-date">21.02.2024</h3>
+                <a href="http://127.0.0.1:8000/news/detail/1/" class="button-primary">Read</a>
+            </div>
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="../../static/images/watermelon.jpg" alt="test">
+                </div>
+                <h3 class="news-title">Хочу арбуз</h3>
+                <h3 class="news-date">21.02.2024</h3>
+                <a href="http://127.0.0.1:8000/news/detail/2/" class="button-primary">Read</a>
+            </div>
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="../../static/images/bandit.jpg" alt="test">
+                </div>
+                <h3 class="news-title">Попуг бандит???</h3>
+                <h3 class="news-date">21.02.2024</h3>
+                <a href="http://127.0.0.1:8000/news/detail/3/" class="button-primary">Read</a>
+            </div>
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="../../static/images/bananas.jpg" alt="test">
+                </div>
+                <h3 class="news-title">Бананчики</h3>
+                <h3 class="news-date">23.02.2024</h3>
+                <a href="http://127.0.0.1:8000/news/detail/6/" class="button-primary">Read</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
